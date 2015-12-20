@@ -16,6 +16,7 @@ settings.configure(
     ),
     #Put all generated files in GENERATED_SITE_DIR
     GENERATED_SITE_DIR = os.path.join(BASE_DIR, 'generated_site'),
+    #set SATIC_ROOT to enalbe django command collectstatc for finally puts all static file in this dir
     STATIC_ROOT = os.path.join(BASE_DIR, 'generated_site', 'static'),
 )
 
