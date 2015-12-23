@@ -5,7 +5,7 @@ import sys
 #import django packages
 from django.conf import settings
 
-BASE_DIR = os.path.dirname(__file__)
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
 settings.configure(
     DEBUG = True,
@@ -14,6 +14,7 @@ settings.configure(
 	'django.contrib.staticfiles',
 	'builder',
     ),
+    STATIC_URL = '/static/',
     SITE_PAGE_DIRECTORY = os.path.join(BASE_DIR, 'pages'),
     #Put all generated files in GENERATED_SITE_DIR
     GENERATED_SITE_DIR = os.path.join(BASE_DIR, 'generated_site'),
