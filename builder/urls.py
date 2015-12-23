@@ -1,6 +1,7 @@
 from django.conf.urls import url
-from . import views
+from .views import page 
 
 urlpatterns = (
-    url(r'^$', views.index, name='index'),
+    url(r'^$', page, name='index'),
+    url(r'^(?P<slug>[\w.-_]+)/$', page, name='page'),
 )
