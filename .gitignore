@@ -1,3 +1,4 @@
 pages/*
 *.pyc
 *.swp
+generated_site/*

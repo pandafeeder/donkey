@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
 
 from django.http import Http404
@@ -19,7 +22,8 @@ def get_page_or_404(pagename):
 
 def page(request, slug='index'):
     """render each page"""
-    pagename = '{}.html'.format(slug)
+    #pagename = '{}.html'.format(slug)
+    pagename = slug+'.html'
     page = get_page_or_404(pagename)
     context = {
 	'page': page,
